@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import axios from 'axios';
-
+import backgroundImage from '/bg.png'
 
 //code began from below
 const apiKey = import.meta.env.VITE_API_KEY
@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1><img src="./public/Color logo - no background.png" width="70px"/><>Weather App</></h1>
+        <h1><img src={backgroundImage} width="70px"/><>Weather App</></h1>
         <div className='searchDiv'>
           <input
             className='searchBox'

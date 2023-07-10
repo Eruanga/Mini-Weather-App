@@ -1,0 +1,133 @@
+
+/* body {
+  background-image: url("./public/bodybackground.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+} */
+/* nav {
+  background-color: rgb(158, 110, 47);
+}
+.drpDown {
+  display: flex;
+}
+.WeatherChoice {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-content: auto;
+} */
+
+/* #root { */
+  /* max-width: 1280px; */
+  /* margin: 2px;
+  padding: 2px;
+  
+}
+.hdr-nav {
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+}
+
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+/* Started my css from below */
+body {
+  background-image: url("./public/background design.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+h1 {
+  font-size: 60px;
+  color: gainsboro;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+
+}
+.searchBox {
+  border-radius: 6px;
+  border: ridge;
+  outline: none;
+  cursor: pointer;
+  font-size: 25px;
+  width: 400px;
+  align-self: center;
+} :focus {
+  border: outset;
+}
+button:hover{ 
+  background-color: green;
+  color: white;
+  border: none;
+}
+.searchDiv {
+  display: flex;
+  flex-direction: column;
+  
+}
+button {
+  width: 20%;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: outset;
+  align-self: center;
+}
+.infoDiv {
+  display: grid;
+  grid-auto-flow: column;
+  margin-top: 100px;
+  gap: 50px;
+  color: white;
+  font-size: 26px;
+  width: fit-content;
+  margin-left: 50px;
+}
+p {
+  /* border: outset; */
+  border-top: groove;
+}
+.nameFlag {
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+}
+
+@media (max-width: 700px) {
+  html {
+   
+    min-height: -webkit-fill-available;
+    /* height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
+    /* height: 100%; */
+  }
+  .infoDiv {
+    
+    grid-auto-flow: row;
+    margin-top: 100px;
+    
+  }
+}

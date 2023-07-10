@@ -42,9 +42,9 @@ function App() {
   if (typeof weather.weather !== "undefined") {
     const weatherCondition = weather.weather[0].main.toLowerCase();
     if (weatherCondition === "clouds") {
-      weatherImage = <img src="./public/Cloudy.png" alt="Cloudy" width="500px" height="200px" style={{ display:"flex", flexDirection:"column" }}/>;  
+      weatherImage = <img src="/Cloudy.png" alt="Cloudy" width="500px" height="200px" style={{ display:"flex", flexDirection:"column" }}/>;  
     } else if (weatherCondition === "clear") {
-      weatherImage = <img src="./public/sunny.jpg" alt="Sunny" width="500px" height="200px" style={{ display:"flex", flexDirection:"column" }} />;
+      weatherImage = <img src="/sunny.jpg" alt="Sunny" width="500px" height="200px" style={{ display:"flex", flexDirection:"column" }} />;
     }
   }
 

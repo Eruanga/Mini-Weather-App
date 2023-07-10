@@ -51,7 +51,7 @@
 
 /* Started my css from below */
 body {
-  background-image: url("./public/background design.png");
+  background-image: url("/background design.png");
   background-repeat: no-repeat;
   background-size: cover;
   

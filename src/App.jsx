@@ -1,78 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <header>
-//         <nav>
-//           <section className='tryin'>
-//           <div className='hdr-nav'>
-//           <div>
-//             <strong><h4>VY WEATHER LOGISTICS</h4></strong>
-//           </div>
-//           <div>
-//             <input typeof='search' placeholder='Search'/>
-//           </div>
-//           <div className='drpDown'>
-//             <div>
-//               <ul>
-//                 <li>F</li>
-//                 <li>C</li>
-//               </ul>
-//             </div>
-//             <div>
-//               <ul>
-//                 <li>Americas</li>
-//                 <li>Africa</li>
-//                 <li>Europe</li>
-//                 <li>Asia</li>
-//                 <li>Australia</li>
-//               </ul>
-//             </div>
-//           </div>
-//           </div>
-//           </section>
-//         </nav>
-//       </header>
-//       <main className='container'>
-//         <div className='WeatherChoice'>
-//           <div>
-//             Today
-//           </div>
-//           <div>
-//             Hourly
-//           </div>
-//           <div>
-//             10 days
-//           </div>
-//           <div>
-//             Weekend
-//           </div>
-//           <div>
-//             Monthly
-//           </div>
-//           <div>
-//             Yearly
-//           </div>
-//         </div>
-
-//         <div className='countriesList'>
-        
-//         </div>
-//       </main>
-        
-//     </>
-//   )
-// }
+import axios from 'axios';
 
 
 //code began from below
-
+const apiKey = import.meta.env.VITE_API_KEY
+// const apiKey = process.env.REACT_APP_API_KEY
 const api = {
-  key: "a2817935e4304887a6db0d6d28b9a461",
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
@@ -81,18 +15,16 @@ const api2 = {
 };
 
 function App() {
+
   const [searchBar, setSearchBar] = useState("");
   const [weather, setWeather] = useState({});
   const [flag, setFlag] = useState("");
 
 
-  const searchClicked = () => {
-    fetch(`${api.base}weather?q=${searchBar}&units=metric&appid=${api.key}`)
-      .then((res) => res.json())
-      .then((result) => {
-        setWeather(result);
-      });
-    console.log("I was clicked");
+  const searchClicked = async () => {
+   const res= await axios(`${api.base}weather?q=${searchBar}&units=metric&appid=${apiKey}`)
+   const data = await res.data
+        setWeather(data);
   };
 
   const countFlag = () => {
